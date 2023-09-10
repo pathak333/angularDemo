@@ -1,0 +1,17 @@
+<h3 class="text-white font-semibold text-2xl">Add Item</h3>
+<form>
+    <div class="mb-6">
+        <label for="itemName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Item Name</label>
+        <input name="name" type="text" id="itemName" [(ngModel)]="newItem.name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Item Name" required>
+      </div>
+  <!-- <label for="itemName">Item Name:</label>
+  <input name="name" type="text" id="itemName" [(ngModel)]="newItem.name" required> -->
+  <div class="mb-6">
+    <label for="itemPrice" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Item Price</label>
+    <input name="price" type="number" id="itemPrice" [(ngModel)]="newItem.price" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Item Name" required>
+  </div>
+  <!-- <label for="itemPrice">Item Price:</label>
+  <input name="price" type="number" id="itemPrice" [(ngModel)]="newItem.price" required> -->
+  <button (click)="addItem()" class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Item</button>
+  <button (click)="cancel()" class="text-white outline outline-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cancel</button>
+</form>

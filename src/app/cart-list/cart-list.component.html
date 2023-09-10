@@ -1,0 +1,28 @@
+<div class="flex flex-row items-center m-2">
+    <div (click)="back()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21v-2z" fill="#fff" /></svg>
+    </div>
+    <p class=" ml-2 font-extrabold text-white text-3xl">cart-list works!</p>
+</div>
+
+
+<ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700 ">
+    <li class="pb-3 sm:pb-4" *ngFor="let item of storedData; let i = index">
+       <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+             <img class="w-8 h-8 rounded-full" src="assets/images/item.png" alt="Item">
+          </div>
+          <div class="flex-1 min-w-0">
+             <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                {{item.name}}
+             </p>
+             <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+               ${{item.price}}
+             </p>
+          </div>
+          <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white" (click)="removeFromCart(item)">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z" fill="#fff" /></svg>
+          </div>
+       </div>
+    </li>
+ </ul>
